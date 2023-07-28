@@ -1,10 +1,12 @@
 package com.example.appwebsenai.model;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
-@EntityScan
+@Entity
 public class Person {
 
+    @Id
     private Integer id;
 
     private String name;
