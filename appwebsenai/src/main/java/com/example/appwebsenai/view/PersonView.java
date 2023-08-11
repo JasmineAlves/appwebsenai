@@ -19,12 +19,11 @@ public class PersonView {
         return controller.findPerson(name);
     }
 
-
     @DeleteMapping("/person")
     public String deletePerson(@PathParam("name") String name){
         controller.removePerson(name);
 
-        return "Pessoa com o Nome de " + name + " foi deletada";
+        return "A pessoa de nome " + name + " foi deletada!";
     }
 
     @PostMapping("/person")
@@ -46,4 +45,5 @@ public class PersonView {
     public String helloWorld(){
         return "Hello world";
     }
+
 }
